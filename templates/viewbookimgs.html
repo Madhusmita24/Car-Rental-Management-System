@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bookings</title>
+</head>
+
+<body>
+    <h2>All Bookings</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Car</th>
+            <th>Days</th>
+            <th>Total</th>
+        </tr>
+        {% for b in bookings %}
+        <tr>
+            <td>{{ b.customer_name }}</td>
+            <td>{{ b.brand }} {{ b.model }}</td>
+            <td>{{ b.days }}</td>
+            <td>{{ b.total_cost }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
